@@ -1,10 +1,26 @@
-from python:3.11.5-alpine3.17
-WORKDIR /app
+# base image  
+FROM python:3.10   
+# setup environment variable  
+ENV DockerHOME=/home/app  
 
-COPY requirements.txt /app
-RUN pip install -r requirements.txt
-RUN pip install --upgrade pip
-RUN pip install --upgrade pip setuptools wheel
-COPY . /app
-EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# set work directory  
+RUN mkdir -p $DockerHOME  
+
+# where your code lives  
+WORKDIR $DockerHOME  
+
+# set environment variables  
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1  
+
+# install dependencies  
+RUN pip install --upgrade pip  
+
+# copy whole project to your docker home directory. 
+COPY . $DockerHOME  
+# run this command to install all dependencies  
+RUN pip install -r requirements.txt  
+# port where the Django app runs  
+EXPOSE 8000  
+# start server  
+CMD python manage.py runserver  0.0.0.0:8000
