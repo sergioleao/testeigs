@@ -6,8 +6,6 @@ To up system in dev mod:
     docker build -t igs . 
     docker run -p 8000:8000 igs
 
-
-
 user: igs
 pass: 123456
 
