@@ -26,6 +26,8 @@ website private:
     http://127.0.0.1:8000/api/v1/admin/
     http://127.0.0.1:8000/api/v1/admin/employee/ (only authenticated)
     http://127.0.0.1:8000/api/v1/admin/department/ (only authenticated)
+    http://127.0.0.1:8000/api/v1/doc/ (Api documentation Swagger)
+    http://127.0.0.1:8000/api/v1/redoc/ (Api documentation RedDoc)
     
 
 
