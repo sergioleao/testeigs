@@ -1,0 +1,707 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{%static 'images/IGS.jpg' %}" type="image/x-icon">
+    <title>IGS - International Global Solutions</title>
+    <!-- Bootstrap -->
+    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Extra plugin css -->
+    <link href="{%static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{%static 'css/owl.carousel.css' %}" rel="stylesheet">
+
+    <link href="{%static 'css/style.css'%}" rel="stylesheet">
+    <link href="{%static 'css/responsive.css'%}" rel="stylesheet">
+    <link href="{%static 'css/css_1.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/font-awesome.min.css'%}">
+    <script type="text/javascript" src="{%static 'js/jquery.magnific-popup.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/masonry.pkgd.min.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/swiper.min.js'%}"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/css.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'widget_css.php' %}">
+    <style type="text/css">
+        body .sk_branding {
+            display: block !important;
+        }
+
+        body .sk_branding a {
+            display: block !important;
+        }
+    </style>
+    <style type="text/css">
+        body .sk_branding {
+            display: block !important;
+        }
+
+        body .sk_branding a {
+            display: block !important;
+        }
+    </style>
+    <style type="text/css">
+        body .sk_branding {
+            display: block !important;
+        }
+
+        body .sk_branding a {
+            display: block !important;
+        }
+    </style>
+    <style type="text/css">
+        body .sk_branding {
+            display: block !important;
+        }
+
+        body .sk_branding a {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main_menu_area stricky-fixed fadeInDown animated">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <img src="{%static 'images/hamburger-menu.png'%}" width="20px" alt="menu">
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="{%static 'images/logo.png' %}" alt="logo-igs"
+                            height="100%"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#vaga">Vagas</a></li>
+                        <li><a href="#contato">Fale Conosco</a></li>
+                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                        {% if user.is_authenticated %}
+
+                        <li><a href='api/v1/admin/'>Api Private</a></li>
+                        {% endif%}
+                        <li><a href='api/v1/public/'>Api Public</a></li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+
+    <!-- header -->
+
+    <div id="inicio" class="full">
+        <h1 class="slide-top">Seja Bem-Vindo a IGS</h1>
+        <h2> Somos uma empresa com atuação global, especializada no desenvolvimento de softwares para jogos de cassino.
+            <br>Trabalhamos de forma exclusiva para Ortiz Gaming, uma das maiores multinacionais da indústria de jogos,
+            líder mundial em vídeo bingo.
+        </h2>
+        <a href="#vaga" class="join_btn ">Junte-se a nós</a>
+    </div>
+
+
+    <!-- header -->
+
+    <!-- nossos serviços -->
+    <section class="our_service_area">
+        <div class="container">
+            <div class="main_white_title">
+                <h2>Nossos Serviços</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4col-md-2 col-lg-2 col-lg-offset-1">
+                    <div class="service_item">
+                        <img src="{%static 'images/icon1.png' %}" width="40%" alt="icon-software">
+                        <h3>Software Integrado</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4col-md-2 col-lg-2">
+                    <div class="service_item">
+                        <img src="{%static 'images/icon2.png' %}" width="40%" alt="icon-iot">
+                        <h3>IoT</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4col-md-2 col-lg-2col-md-2 col-lg-offset-0 col-lg-2">
+                    <div class="service_item">
+                        <img src="{%static 'images/icon3.png' %}" width="40%" alt="icon-mobile">
+                        <h3>Mobile</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4col-md-2 col-lg-2col-md-2 col-lg-offset-0 col-lg-2">
+                    <div class="service_item">
+                        <img src="{%static 'images/icon4.png' %}" width="40%" alt="icon-mobile">
+                        <h3>Máquinas Físicas</h3>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4col-md-2 col-lg-22 col-lg-2 col-lg-offset-0">
+                    <div class="service_item">
+                        <img src="{%static 'images/icon5.png' %}" width="40%" alt="icon-web">
+                        <h3>Web</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- nossos serviços -->
+
+
+    <!-- sobre nos -->
+
+    <section class="about_us_area" id="sobre">
+        <div class="container">
+            <div class="main_title purple_title">
+
+                <h2>Sobre nós</h2>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre2.png' %}" alt="visao">
+                    <h3> Nossa Visão</h3>
+                    <p class="col-lg-offset-0 col-lg-12">Ser reconhecida mundialmente como a maior e mais eficiente
+                        empresa de software para jogos de cassino, focada na melhor experiência para os jogadores e alto
+                        padrão de confiabilidade.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre1.png' %}" alt="missao">
+                    <h3 class="col-lg-12"> Nossa Missão</h3>
+                    <p class="col-lg-8 col-lg-offset-2">Levar inovação e novas experiências aos jogadores.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre3.png' %}" alt="valores">
+                    <h3> Nossos Valores</h3>
+                    <p class="col-lg-offset-0 col-lg-12">Esforço para atingir os objetivos, atitude positiva,
+                        proatividade, resiliência, respeito, ética para trabalhar em grupo e paixão pelo que faz.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- sobre nos -->
+
+
+    <!-- nossos beneficios -->
+
+    <section class="our_benefits_area display_table ">
+        <div class="our_benefits_inner display_table_row ">
+
+            <div class="col-md-6 benefits_img_right display_table_cell_right">
+                <img src="{%static 'images/img-about4.png'%}" alt="atuacao-global" width="100%">
+            </div>
+
+            <div class="benefits_left col-md-6 display_table_cell_right" style="height: 100%; padding-top: 5%">
+                <div class="benefits_content">
+                    <div class="content_title">
+                        <h2>Atuação Global</h2>
+                    </div>
+                    <p>A IGS atua nos grandes polos comerciais. Nossa presença global é um de nossos grandes
+                        diferenciais. Sendo assim, lidamos com diversas culturas e prezamos a desenvoltura para se
+                        comunicar e interagir com os clientes de cada país entendendo suas necessidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="our_benefits_area display_table">
+        <div class="our_benefits_inner display_table_row">
+
+            <div class="benefits_img_right display_table_cell">
+                <img src="{%static 'images/img-about3.png' %}" alt="as-melhores-tecnologias" width="100%">
+            </div>
+
+            <div class="benefits_left display_table_cell" style="padding: 5%">
+                <div class="benefits_content">
+                    <div class="content_title purple_content">
+                        <h2>As melhores tecnologias</h2>
+                    </div>
+                    <p>Trabalhamos com as tecnologias mais recentes para que nossos produtos estejam sempre atualizados.
+                        No momento utilizamos Phaser, Vue.js Angular JS, C, C++, Java, Node.js, .Net core e Godot
+                        visando mais agilidade nos processos. Essa pode ser sua chance de aprender e trabalhar com elas
+                        e se manter atualizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our_benefits_area display_table">
+        <div class="our_benefits_inner display_table_row ">
+
+            <div class="col-md-6 benefits_img_right display_table_cell_right">
+                <img src="{%static 'images/img-about1.png' %}" alt="atuacao-global" width="100%">
+            </div>
+
+            <div class="benefits_left col-md-6 display_table_cell_right" style="height: 100%; padding-top: 5%">
+                <div class="benefits_content">
+                    <div class="content_title">
+                        <h2>Benefícios</h2>
+                    </div>
+                    <p>Além de trabalhar em uma empresa com atuação global, utilizando tecnologias de ponta, aqui você
+                        também conta com assistência médica e odontológica, vale refeição, vale alimentação, vale
+                        transporte, estacionamento, salário atrativo, prêmio de acordo com a performance, descontos em
+                        cursos da FIAP, parceria com o SESC para toda família e tudo isso sem Dress Code!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- nossos beneficios -->
+
+
+    <!-- sobre nos -->
+
+    <section class="about_us_area">
+        <div class="container">
+
+            <div class="ccol-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre4.png'%}" width="12%" alt="visao">
+                    <h3 class="col-lg-12"> Conhecimento Compartilhado</h3>
+                    <p class="col-lg-offset-0 col-lg-12">Conhecimento é sempre bem-vindo! Aqui incentivamos nossos
+                        profissionais a serem curiosos, adquirir novos conhecimentos e compartilhá-los entre os colegas.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre5.png' %}" width="12%" alt="missao">
+                    <h3> Mentoria</h3>
+                    <p class="col-lg-offset-0 col-lg-12">Nossos recém chegados são orientados por toda a equipe no
+                        começo da jornada. Você irá participar de todos os assuntos para que possa encontrar seus
+                        próprios meios para resolver novos problemas.</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="about_item">
+                    <img src="{%static 'images/icon-sobre6.png' %}" width="12%" alt="valores">
+                    <h3> Habilidades Interpessoais</h3>
+                    <p class="col-lg-offset-0 col-lg-12">Todos tem seus talentos pessoais em determinadas áreas. Sendo
+                        assim nós promovemos todo o ambiente e as ferramentas necessárias para que esses talentos possam
+                        brilhar.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- sobre nos -->
+
+    <!--================ nossos servicos =================-->
+    <section class="divisao trabalhe-conosco">
+        <div class="container" id="vaga">
+            <div class="main_white_title">
+                <h2>Trabalhe Conosco</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Nossa sede no Brasil possui uma equipe com um pouco de mais de 50 profissionais focada no
+                        desenvolvimento de soluções. Quer fazer parte deste time? Confira nossas vagas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================ nossos servicos =================-->
+
+    <div class="latest_blog_area">
+        <div class="container">
+            <div class="sk-ww-linkedin-page-jobs" data-embed-id="84452"
+                style="height: auto; width: 100%; font-family: &quot;Roboto Condensed&quot;; background-color: rgb(255, 255, 255); color: rgb(85, 85, 85);">
+                <div class="display-none sk-settings" style="display:none;">
+                    <div class="is_updated">1</div>
+                    <div class="name">Untitled Solution</div>
+                    <div class="domain">taylorfr.co.uk</div>
+                    <div class="username">igs-desenvolvimento-software</div>
+                    <div class="links_clickable">1</div>
+                    <div class="theme">Maaliwalas Theme</div>
+                    <div class="show_profile_picture">1</div>
+                    <div class="show_profile_name">1</div>
+                    <div class="show_profile_follow_button">1</div>
+                    <div class="show_profile_description">1</div>
+                    <div class="show_profile_follower_count">1</div>
+                    <div class="layout">2</div>
+                    <div class="post_count">20</div>
+                    <div class="column_count">3</div>
+                    <div class="post_height">150</div>
+                    <div class="item_content_padding">10</div>
+                    <div class="show_circular_main_picture">1</div>
+                    <div class="show_post_date">1</div>
+                    <div class="excluded_posts"></div>
+                    <div class="arrow_color">#555555</div>
+                    <div class="arrow_background_color">#000000</div>
+                    <div class="carousel_post_height">0</div>
+                    <div class="arrow_opacity">0.6</div>
+                    <div class="delay">1</div>
+                    <div class="widget_bg_color">#ffffff</div>
+                    <div class="widget_font_color">#555555</div>
+                    <div class="widget_link_color">#101010</div>
+                    <div class="details_bg_color">#f5f5f5</div>
+                    <div class="details_font_color">#444444</div>
+                    <div class="details_link_color">#2c2c2c</div>
+                    <div class="details_link_hover_color">#a2bec4</div>
+                    <div class="details_secondary_font_color">#555555</div>
+                    <div class="title_background_color">#ebebeb</div>
+                    <div class="font_family">Roboto Condensed</div>
+                    <div class="sample_text">Roboto Condensed</div>
+                    <div class="title_font_size">25</div>
+                    <div class="details_font_size">17</div>
+                    <div class="linkedin_page_name_text"></div>
+                    <div class="follow_button_text">Follow</div>
+                    <div class="visit_website_button_text">Visit website</div>
+                    <div class="load_more_posts_text">Load more posts</div>
+                    <div class="button_bg_color">#435b77</div>
+                    <div class="button_text_color">#ffffff</div>
+                    <div class="button_hover_bg_color">#3480dc</div>
+                    <div class="button_hover_text_color">#ffffff</div>
+                    <div class="show_load_more_button">1</div>
+                    <div class="custom_css"></div>
+                    <div class="embed_id">84452</div>
+                    <div class="type">58</div>
+                    <div class="sk_folder_name">linkedin-page-jobs</div>
+                    <div class="sk_class_name">sk-ww-linkedin-page-jobs</div>
+                    <div class="show_article_box_shadow">0</div>
+                    <div class="show_view_on_google_button">0</div>
+                    <div class="show_location_on_popup">0</div>
+                    <div class="show_box_shadow">0</div>
+                    <div class="instagram_tag"></div>
+                    <div class="hashtag_text">#</div>
+                    <div class="id">84452</div>
+                    <div class="twitter_tag"></div>
+                    <div class="fb_album_id"></div>
+                    <div class="fb_page_id">Museums.Sheffield</div>
+                    <div class="twitter_collection_id"></div>
+                    <div class="board_name"></div>
+                    <div class="twitter_username"></div>
+                    <div class="google_calendar_id"></div>
+                    <div class="use_youtube_channel_id">0</div>
+                    <div class="refresh_token"></div>
+                    <div class="long_lived_user_access_token"></div>
+                    <div class="playlist_id"></div>
+                    <div class="place_id"></div>
+                    <div class="place_name"></div>
+                    <div class="place_lat"></div>
+                    <div class="place_lng"></div>
+                    <div class="fb_video_id"></div>
+                    <div class="no_data_text">No jobs yet. Check back later!</div>
+                </div>
+                <div class="first_loading_animation" style="text-align:center; width:100%;"><img
+                        src="{% static 'fonts/ripple.svg' %}" class="loading-img"
+                        style="width: auto !important; display: none;" alt="Post image"></div>
+                <div class="linkedin-page-jobs-user-root-container">
+                    <div class="linkedin-page-jobs-profile-container">
+                        <div class="linkedin-page-jobs-profile-pic"
+                            style="background-image: url(&quot;1552326891111.html&quot;); border-radius: 50%;"></div>
+                    </div>
+                    <div class="sk-linkedin-page-jobs-profile-info width-60">
+                        <div class="sk_facebook_jobs_feed_username_follow"><span
+                                class="sk-linkedin-page-jobs-profile-usename" style="font-size: 25px;"><a
+                                    class="href_status_trigger_feed" target="_blank"
+                                    style="text-decoration: none; color: rgb(16, 16, 16);"
+                                    href="https://www.linkedin.com/company/igs-desenvolvimento-software/jobs/?viewAsMember=true"
+                                    title="
+      IGS | Desenvolvimento de Software
+    ">
+                                    IGS | Desenvolvimento de Software
+                                </a></span></div>
+                        <div class="sk-linkedin-page-jobs-profile-counts" style="font-size: 17px;">
+                            <div><span><span class="f-w-b">7,533</span> Followers</span> </div>
+                        </div>
+                        <div class="href_status_trigger_feed_container sk-linkedin-page-jobs-profile-description"
+                            style="font-size: 17px;">
+                            Tecnologia, Inovação e Entretenimento
+                        </div><button type="button"
+                            onclick="window.open('https://www.linkedin.com/company/igs-desenvolvimento-software/jobs/?viewAsMember=true');"
+                            class="linkedin-page-jobs-user-container sk-follow-linkedin-btn"
+                            style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(67, 91, 119); border-color: rgb(67, 91, 119); color: rgb(255, 255, 255); font-size: 17px;"><i
+                                class="fa fa-plus" aria-hidden="true"></i> Follow</button>
+                    </div>
+                </div>
+                <div class="grid-linkedin-page-jobs" style="position: relative; height: 251px;">
+                    <div class="grid-sizer-linkedin-page-jobs" style="width: 33%;"></div>
+                    <div class="grid-item-linkedin-page-jobs grid-item-linkedin-page-jobs-undefined"
+                        style="width: 33%; position: absolute; left: 0%; top: 0px;">
+                        <div class="grid-content" style="font-size: 17px;">
+                            <div class="sk-job-title-container"
+                                style="height: auto; background-color: rgb(235, 235, 235); color: rgb(68, 68, 68); padding: 10px; cursor: pointer;">
+                                <a href="https://www.linkedin.com/jobs/view/3141861855/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=jtxKch%2FbMZI5IUM5upimnA%3D%3D&amp;trk=flagship3_search_srp_jobs"
+                                    target="_blank" class="href_status_trigger_jobs_container"
+                                    style="color: rgb(44, 44, 44);" title="Tech Lead Backend de Jogos">Tech Lead Backend
+                                    de Jogos</a>
+                            </div>
+                            <div class="sk-jobs-details-container"
+                                style="background-color: rgb(245, 245, 245); padding: 10px;">
+                                <div class="jobs-content">
+                                    <div class="sk-jobs-content-body">
+                                        <div class="href_status_trigger_jobs_container sk-jobs-text-padding"
+                                            style="color: rgb(68, 68, 68);">Actively recruiting<span
+                                                class="sk-jobs-ago-text">1 week ago</span></div>
+                                        <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                                    </div>
+                                </div>
+                                <div class="jobs-jobs-counts" style="color: rgb(68, 68, 68);"><button type="button"
+                                        onclick="window.open('https://www.linkedin.com/jobs/view/3141861855/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=jtxKch%2FbMZI5IUM5upimnA%3D%3D&amp;trk=flagship3_search_srp_jobs');"
+                                        class="linkedin-page-jobs-user-container sk-btn-apply-now"
+                                        style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(67, 91, 119); border-color: rgb(67, 91, 119); color: rgb(255, 255, 255); font-size: 17px;">Apply
+                                        now</button></div>
+                            </div>
+                        </div>
+                        <div class="white-popup mfp-hide sk-popup-container"
+                            style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); border-radius: 8px;">
+                            <div class="sk-popup-media">
+                                <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                            </div>
+                            <div class="sk-popup-details">
+                                <div class="sk-popup-details-body">
+                                    <div class="href_status_trigger_jobs_container sk-mt-10"><b>Tech Lead Backend de
+                                            Jogos</b></div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">São Paulo, Brazil
+                                        On-site
+                                    </div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">
+                                        <hr class="sk-separator">
+                                        <div class="sk-job-description">undefined</div><span><small>1 week
+                                                ago</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item-linkedin-page-jobs grid-item-linkedin-page-jobs-undefined"
+                        style="width: 33%; position: absolute; left: 32.9167%; top: 0px;">
+                        <div class="grid-content" style="font-size: 17px;">
+                            <div class="sk-job-title-container"
+                                style="height: auto; background-color: rgb(235, 235, 235); color: rgb(68, 68, 68); padding: 10px; cursor: pointer;">
+                                <a href="https://www.linkedin.com/jobs/view/3156523039/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=vFFsTxqOSH2tbKnd%2FwtP7A%3D%3D&amp;trk=flagship3_search_srp_jobs"
+                                    target="_blank" class="href_status_trigger_jobs_container"
+                                    style="color: rgb(44, 44, 44);"
+                                    title="Analista de Testes Automatizados Pleno (Software e Hardware)">Analista de
+                                    Testes Automatizados Pleno (Software e Hardware)</a>
+                            </div>
+                            <div class="sk-jobs-details-container"
+                                style="background-color: rgb(245, 245, 245); padding: 10px;">
+                                <div class="jobs-content">
+                                    <div class="sk-jobs-content-body">
+                                        <div class="href_status_trigger_jobs_container sk-jobs-text-padding"
+                                            style="color: rgb(68, 68, 68);">Actively recruiting<span
+                                                class="sk-jobs-ago-text">2 days ago</span></div>
+                                        <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                                    </div>
+                                </div>
+                                <div class="jobs-jobs-counts" style="color: rgb(68, 68, 68);"><button type="button"
+                                        onclick="window.open('https://www.linkedin.com/jobs/view/3156523039/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=vFFsTxqOSH2tbKnd%2FwtP7A%3D%3D&amp;trk=flagship3_search_srp_jobs');"
+                                        class="linkedin-page-jobs-user-container sk-btn-apply-now"
+                                        style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(67, 91, 119); border-color: rgb(67, 91, 119); color: rgb(255, 255, 255); font-size: 17px;">Apply
+                                        now</button></div>
+                            </div>
+                        </div>
+                        <div class="white-popup mfp-hide sk-popup-container"
+                            style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); border-radius: 8px;">
+                            <div class="sk-popup-media">
+                                <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                            </div>
+                            <div class="sk-popup-details">
+                                <div class="sk-popup-details-body">
+                                    <div class="href_status_trigger_jobs_container sk-mt-10"><b>Analista de Testes
+                                            Automatizados Pleno (Software e Hardware)</b></div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">São Paulo, Brazil
+                                        On-site
+                                    </div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">
+                                        <hr class="sk-separator">
+                                        <div class="sk-job-description">undefined</div><span><small>2 days
+                                                ago</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item-linkedin-page-jobs grid-item-linkedin-page-jobs-undefined"
+                        style="width: 33%; position: absolute; left: 65.9722%; top: 0px;">
+                        <div class="grid-content" style="font-size: 17px;">
+                            <div class="sk-job-title-container"
+                                style="height: auto; background-color: rgb(235, 235, 235); color: rgb(68, 68, 68); padding: 10px; cursor: pointer;">
+                                <a href="https://www.linkedin.com/jobs/view/3115578701/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=Qri6bG4MdB7oF8K7%2FYvEcA%3D%3D&amp;trk=flagship3_search_srp_jobs"
+                                    target="_blank" class="href_status_trigger_jobs_container"
+                                    style="color: rgb(44, 44, 44);"
+                                    title="Desenvolvedor Backend de Jogos - Python">Desenvolvedor Backend de Jogos -
+                                    Python</a>
+                            </div>
+                            <div class="sk-jobs-details-container"
+                                style="background-color: rgb(245, 245, 245); padding: 10px;">
+                                <div class="jobs-content">
+                                    <div class="sk-jobs-content-body">
+                                        <div class="href_status_trigger_jobs_container sk-jobs-text-padding"
+                                            style="color: rgb(68, 68, 68);">Actively recruiting<span
+                                                class="sk-jobs-ago-text">2 days ago</span></div>
+                                        <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                                    </div>
+                                </div>
+                                <div class="jobs-jobs-counts" style="color: rgb(68, 68, 68);"><button type="button"
+                                        onclick="window.open('https://www.linkedin.com/jobs/view/3115578701/?eBP=JOB_SEARCH_ORGANIC&amp;recommendedFlavor=ACTIVELY_HIRING_COMPANY&amp;refId=Be1%2BFMWKVrkKi6bIKpwrlw%3D%3D&amp;trackingId=Qri6bG4MdB7oF8K7%2FYvEcA%3D%3D&amp;trk=flagship3_search_srp_jobs');"
+                                        class="linkedin-page-jobs-user-container sk-btn-apply-now"
+                                        style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(67, 91, 119); border-color: rgb(67, 91, 119); color: rgb(255, 255, 255); font-size: 17px;">Apply
+                                        now</button></div>
+                            </div>
+                        </div>
+                        <div class="white-popup mfp-hide sk-popup-container"
+                            style="font-family: &quot;Roboto Condensed&quot;; background-color: rgb(255, 255, 255); color: rgb(85, 85, 85); border-radius: 8px;">
+                            <div class="sk-popup-media">
+                                <div class="sk_jobs_media " style="color: rgb(68, 68, 68);"></div>
+                            </div>
+                            <div class="sk-popup-details">
+                                <div class="sk-popup-details-body">
+                                    <div class="href_status_trigger_jobs_container sk-mt-10"><b>Desenvolvedor Backend de
+                                            Jogos - Python</b></div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">São Paulo, Brazil
+                                        On-site
+                                    </div>
+                                    <div class="href_status_trigger_jobs_container sk-mt-10">
+                                        <hr class="sk-separator">
+                                        <div class="sk-job-description">undefined</div><span><small>2 days
+                                                ago</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sk-linkedin-page-jobs-bottom-btn-container"></div>
+                <div class="sk_branding"
+                    style="padding:10px; display:block !important; text-align:center; text-decoration: none !important; color:#555; font-family:Roboto Condensed; font-size:15px;">
+                    <a class="tutorial_link"
+                        href="https://www.sociablekit.com/tutorials/embed-linkedin-page-jobs-website/" target="_blank"
+                        style="text-underline-position:under; color:#3480dc;font-size:15px;"
+                        title="Embed LinkedIn Page Jobs on your  website">Embed LinkedIn Page Jobs on your website</a>
+                </div>
+            </div>
+            <script type="text/javascript" async="" src="{%static  'js/recaptcha__en.js' %}"
+                crossorigin="anonymous"></script>
+            <script src="{%static  'js/widget.js' %}" async="" defer=""></script>
+        </div>
+    </div>
+
+
+
+    <!--================End Asked Question Area =================-->
+
+    <section class="fale_conosco" id="fale-conosco">
+        <div class="container" id="contato">
+            <div class="main_white_title purple_title">
+                <h2>Fale conosco</h2>
+                <br>
+                <br>
+                <p>Não encontrou uma vaga com seu perfil? Envie seu currículo para futuras oportunidades.</p>
+            </div>
+            <form action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                <div class="form-group col-md-5">
+                    <input type="text" class="formulario" id="nome" name="nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-5 col-lg-offset-2 col-lg-5">
+                    <input type="email" class="formulario" id="replyto" name="replyto" placeholder="E-mail">
+                </div>
+                <div class="form-group col-md-12 col-lg-12">
+                    <input type="text" class="formulario" id="assunto" name="assunto"
+                        placeholder="Assunto - Preencha com sua área de atuação">
+                </div>
+                <div class="form-group col-md-12 col-lg-12">
+                    <textarea class="formulario" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+                </div>
+                <div class="form-group col-md-12 col-lg-12">
+                    <input type="file" name="arquivo" id="arquivo" class="file_customizada">
+                </div>
+                <div class="form-group col-md-12">
+                    <button class="btn btn-default candidatar_btn" type="submit">Enviar</button>
+                </div>
+            </form>
+            <div id="success">
+                <p>Sua mensagem foi enviada!</p>
+            </div>
+            <div id="error">
+                <p>Desculpe! Algo deu errado, sua mensagem não foi enviada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--================ Footer =================-->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="col-md-3">
+                <section class="navegue">
+                    <h3 class="purple">Navegue</h3>
+                    <ul>
+                        <li><a class="footer" href="#inicio">Início</a></li>
+                        <li><a class="footer" href="#sobre">Sobre nós</a></li>
+                        <li><a class="footer" href="#vaga">Vagas</a></li>
+                        <li><a class="footer" href="#contato">Fale Conosco</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-md-3">
+                <h3 class="purple">Contatos</h3>
+                <a href="mailto:genteegestao@igs-software.com.br" class="footer">genteegestao@igs-software.com.br</a>
+                <p>+ 55 11 3846 9783</p>
+                <p>Moema - SP</p>
+            </div>
+            <div class="col-md-3">
+                <h3 class="purple">Redes Sociais</h3>
+                <a href="https://pt-br.facebook.com/ortizgamingbingo/"><img src="{%static  'images/icon-rede1.jpg' %}"
+                        width="10%" alt="facebook"></a>
+                <a href="https://www.linkedin.com/company/igs-international-solutions/"><img
+                        src="{%static 'images/icon-rede2.jpg' %}" width="10%" alt="linkedin"></a>
+            </div>
+            <div class="col-md-3">
+                <h3 class="purple">Copyright</h3>
+                <p>Copyright 2019 - IGS International Solutions</p>
+            </div>
+        </div>
+    </footer>
+    <!--================ Footer =================-->
+
+    <script src="{%static 'js/api.js' %}" async="" defer=""></script>
+    <script src="{%static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+    <script src="{%static 'js/owl.carousel.min.js' %}"></script>
+    <!-- contact js -->
+    <script src="{%static 'js/jquery.form.js' %}"></script>
+    <script src="{%static  'js/jquery.validate.min.js' %}"></script>
+    <script src="{%static  'js/contact.js' %}"></script>
+
+    <script src="{%static 'js/theme.js' %}"></script>
+
+    <div
+        style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div
+            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+        </div>
+        <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes"
+                src="{%static  'bframe.html' %}" name="c-z2ly4u86lfgs" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                style="width: 100%; height: 100%;"></iframe></div>
+    </div>
+</body>
+
+</html>

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!05@hi=^l$+a%z(6^%8btb1$xf!xjanqh34+@!zcp6jcxw%2e@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['194.233.64.228']
 
 
 # Application definition
@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
+     'drf_yasg',
     'department',
     'employer',
     'rest_framework',
-     'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'igmsm.wsgi.application'
 
-REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' ,
+                  'DEFAULT_PERMISSION_CLASSES': [
+      
+        'rest_framework.permissions.AllowAny',
+       
+
+    ],
+                  
+                  
+                  }
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
