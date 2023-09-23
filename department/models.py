@@ -3,6 +3,10 @@ from django.db import models
 # Create your models here.
 
 class Department(models.Model):
+    """ Model Base of the department class
+
+    
+    """
     name = models.CharField(max_length=255, blank=False, null=False)
 
 
