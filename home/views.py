@@ -12,6 +12,6 @@ def listemploye(request):
     output = Employee.objects.all()
     return render(request, 'listemploye.html',{'output': output})
 
-def listemployebyid(request, id):
+def listemployebyid(request, id): #TODO não sei se tem necessidade implementar isto -.-, 
     output = Employee.objects.filter(id)
     return render(request, 'listemploye.html',{'output': output})
