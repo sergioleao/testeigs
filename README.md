@@ -14,7 +14,7 @@ Web Login:
     pass: 123456</pre>
 <pre>
 Rest get Token (GET metod):
-    send body with insonmioa or postman
+    send body with insomnia or postman
     key: username  Value: igs 
     key: password  Value: 123456 
     the return will be the token that can be sent in the Header to access private endpoints through REST requests
