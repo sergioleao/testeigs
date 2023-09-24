@@ -8,10 +8,26 @@ To up system in dev mod: <br>
     docker run -p 8000:8000 igs</p>
     </pre>
     
-Login:
+Web Login:
  <pre>
     user: igs <br>
     pass: 123456</pre>
+<pre>
+Rest get Token (GET metod):
+    send body with insonmioa or postman
+    key: username  Value: igs 
+    key: password  Value: 123456 
+    the return will be the token that can be sent in the Header to access private endpoints through REST requests
+    the token must be passed in the header as:
+       key: Authorization
+       Value: Token {the token obtained in the authorization endpoint request (api-token-auth)}
+
+</pre>
+<pre>
+Unit Test on:
+    -tests
+        --test_viewset.py
+</pre>
 
 public rest endpoints:<br>
 <pre>

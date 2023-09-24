@@ -39,12 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'rest_framework',
      'rest_framework.authtoken',
     'home',
      'drf_yasg',
     'department',
     'employer',
-    'rest_framework',
+   
 ]
 
 MIDDLEWARE = [
@@ -79,13 +80,12 @@ WSGI_APPLICATION = 'igmsm.wsgi.application'
 
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' ,
                   'DEFAULT_PERMISSION_CLASSES': [
-      
-        'rest_framework.permissions.AllowAny',
-       
-
-    ],
-                  
-                  
+                    "rest_framework.permissions.AllowAny",
+                    ],
+                    "DEFAULT_AUTHENTICATION_CLASSES": [
+                        "rest_framework.authentication.TokenAuthentication",
+                        'rest_framework.authentication.SessionAuthentication',
+                    ],
                   }
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -138,3 +138,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+ROOT_URLCONF = 'igmsm.urls'

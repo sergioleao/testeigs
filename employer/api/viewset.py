@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from  employer.api.serializers import EmployeeSerializer
 from employer.models import Employee
 from rest_framework import  permissions
+from rest_framework.authentication import TokenAuthentication
 
 class EmployeeViewset(viewsets.ModelViewSet):
     serializer_class = EmployeeSerializer
