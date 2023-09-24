@@ -13,7 +13,7 @@ Web Login:
     user: igs <br>
     pass: 123456</pre>
 <pre>
-Rest get Token (GET metod):
+Rest get Token (GET method):
     send body with insomnia or postman
     key: username  Value: igs 
     key: password  Value: 123456 
