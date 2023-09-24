@@ -8,6 +8,25 @@ To up system in dev mod: <br>
     docker run -p 8000:8000 igs</p>
     </pre>
     
+<p> 
+To up without docker: <br>
+    <pre>
+    git clone https://github.com/sergioleao/testeigs.git <br>
+    cd testeigs  <br>
+    python3 -m venv venv
+        on Windows:
+            - .\venv\Scripts\activate.bat
+        on Systens unix:
+            -  source venv/bin/activate
+    pip install -r requirements.txt   <br>
+        on Windows:
+            - py manage.py runserver
+        on Linux
+            python3 manage.py runserver
+    </p>
+    </pre>
+
+
 Web Login:
  <pre>
     user: igs <br>
