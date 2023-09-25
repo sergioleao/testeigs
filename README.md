@@ -61,7 +61,7 @@ website public: <br>
 <pre>
     http://127.0.0.1:8000/ <br>
     http://127.0.0.1:8000/listemploye/ <br>
-    http://127.0.0.1:8000/api/v1/public/ (rest seach public for web) <br>
+    http://127.0.0.1:8000/api/v1/public/ (rest serach public for web) <br>
 </pre>
 website private: <br>
 <pre>
